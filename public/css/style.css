@@ -49,7 +49,8 @@ body {
     color: rgb(237, 40, 40);
 }
 .navbar-toggler {
-    background-color: gray;
+    background-color: #c12727;
+    border: 1px solid #f1e3e3;
 }
 
 .fa-snowflake {

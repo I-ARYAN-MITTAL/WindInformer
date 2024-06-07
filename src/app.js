@@ -3,9 +3,8 @@ const path = require("path");
 const hbs = require("hbs");
 const app = express();
 const static_path = path.join(__dirname,"../public");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 const partialpath = path.join(__dirname,"../templates/partials")
-
 //built in middleware
 app.set('views', path.join(__dirname,"../templates/views"))
 hbs.registerPartials(partialpath);
@@ -28,5 +27,5 @@ app.get("*",(req,res)=>{
 })
 
 app.listen(port,()=>{
-    console.log("listen port number 3000")
+    console.log("listen port number 5000")
 })
