@@ -17,7 +17,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <title>weather web</title>
 </head>
-<body>
+<body onload="onload()">
     
 {{>navbar}}
     <!-- mainheader -->
@@ -28,12 +28,20 @@
                     <!-- left side div -->
                     <div class="col-md-6 col-12 mainheader_right">
                         <figure>
-                         <img src="images/manpng.png" alt="aryan" class="img-fluid" title="aryanm">
+                         <img src="images/manpng.png" alt="aryan" class="img-fluid" title="aryan">
                         </figure>
                  </div>
                     <div class="col-md-6 col-12 mainheader_left">
-                        <p style="font-size: 2.5rem;">Welcome to weather app</p>
-                        <h1>I Am A <span class="txt_clr" style="color: rgb(237, 40, 40);">Developer</span> in tech field</h1>
+                        <p style="font-size: 1.7rem; font-weight:400;">Welcome to our Weather Website, your reliable source for real-time weather updates! Our platform is designed to provide you with the most accurate and up-to-date weather information, ensuring you stay informed about current temperature, date, and time, no matter where you are.
+
+                        Our mission is to deliver precise and timely weather data to help you plan your day effectively. Whether you're preparing for a trip, a daily commute, or just curious about the current weather conditions, we've got you covered. Our website features a clean and user-friendly interface, making it easy to access the information you need quickly.
+
+                        We utilize advanced weather tracking technology to bring you live updates on the current temperature, alongside the exact date and time. This ensures that you always have the latest information at your fingertips. Our data is sourced from trusted meteorological institutions, guaranteeing its accuracy and reliability.
+
+                        In addition to the current temperature, our website also offers detailed forecasts, so you can stay ahead of any weather changes. We are committed to providing a seamless and informative experience, tailored to meet the needs of users from all walks of life.
+
+                        Thank you for choosing our Weather Website as your go-to source for weather updates. Stay informed, stay prepared, and enjoy the peace of mind that comes with knowing the current weather conditions at any given moment.</p>
+                       
                         <a href="/"><button>GO Back</button></a>
                     </div>
                     
@@ -42,5 +50,6 @@
     </div>   
 
     {{>footer}}
+    <script src="js/main.js"></script>
 </body>
 </html>

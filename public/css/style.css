@@ -1,5 +1,5 @@
 h1 {
-    color: black;
+    color:black;
     
 }
 
@@ -13,36 +13,64 @@ h1 {
     font-family: 'Piazzolla', serif;
     
 }
+/***** darkMode *****/ 
+:root .dark-mode {
+    --bgColor:#000 ;
+    --primaryColor:#e9e0e0;
+}
+
+
+body .dark-mode {
+    overflow: hidden; /* Hide scrollbars */
+    background-color: var(--bgColor);
+    color: var(--primaryColor);
+  }
+  .dark-mode .main_menu1{
+    background-color:var(--bgColor);
+}
+
+.row .dark-mode{
+    margin: 0%;
+    
+}
+ /***** darkmode end Section *****/
+
 
 :root {
-    --primaryColor:#1e272e ;
+    --bgColor:#e9e0e0 ;
+    --primaryColor:#000;
   
 }
+
 
 html {
     font-size: 62.5%;
 }
 
 body {
-    overflow: hidden; /* Hide scrollbars */
+    overflow: hidden; /*Hide scrollbars*/
+    background-color: var(--bgColor);
+    color: var(--primaryColor);
   }
 
 .row{
     margin: 0%;
-}
+ }
 
 .main_menu1{
-    background-color: black;
+    background-color:var(--bgColor);
+    color: var(--primaryColor);
 }
 
 .navbar {
-    color: #fff;
-    background-color: black;
+    color: var(--primaryColor);
+    background-color:var(--bgColor);
     padding: 2rem 0;
+    font-size: 2rem;
 }
 
 .navbar a{
-    color: #fff;
+    color:var(--primaryColor);
     font-size: 1.8rem;
 }
 .navbar a:hover {
@@ -62,6 +90,44 @@ body {
 @keyframes rot {
     0%   { transform: rotate(0deg) }
     100% { transform: rotate(360deg)}
+}
+
+.toggle-btn{
+    margin-top:2px;
+}
+#checkbox{
+    visibility: hidden;
+}
+
+.fas .fa-bars{
+    color: var(--primaryColor);
+}
+
+.toggle-label{
+    width: 5rem;
+    height: 3rem;
+    background-color:var(--primaryColor);
+    display: inline-block;
+    position: relative;
+    border-radius: 10rem;
+}
+
+.toggle-ball{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--bgColor);
+    display: inline-block;
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    transition: all .2s linear;
+
+}
+
+#checkbox:checked + .toggle-label .toggle-ball{
+    transform: translateX(2rem);
+    background-color:var(--bgColor) ;
 }
 
 /* main header */
@@ -116,8 +182,8 @@ body {
     width: 50rem;
     margin: auto;
     min-height: 20rem;
-    background-color:black;
-    border-radius: 1rem;
+    background-color:var(--bgColor);
+    border-radius: 2rem;
     /* padding: 1rem; */
     font-family: "Roboto",sans-serif;
 }
@@ -125,7 +191,7 @@ body {
 .top_layer{
     width: 100%;
     height: 20%;
-    background-color:rgb(237, 40, 40);
+    background-color:var(--bgColor);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -134,7 +200,7 @@ body {
 }
 
 .top_layer p{
-    color: #fff;
+    color: var(--primaryColor);
     font-weight: 300;
     padding: 2rem ;
     font-size: 1.4rem;
@@ -150,14 +216,14 @@ body {
 
 .main_layer #city_name {
     padding: 2rem 0;
-    color: #bfc1c8;
+    color:var(--primaryColor);
     font-weight: 300;
     font-size: 2rem;
 }
 .main_layer .middle_layer {
     display: flex;
     justify-content: space-around;
-    color: #fff;
+    color: var(--primaryColor);
 }
 .main_layer .middle_layer p,
 .main_layer .middle_layer .fa {
@@ -189,8 +255,8 @@ sup {
 .temp_form input[type="text"] {
     width: 100%;
     padding: 2rem 5rem 2rem 2rem;
-    background:black;
-    color: white;
+    background:var(--bgColor);
+    color: var(--primaryColor);
     outline: none;
     border: none;
     font-size: 1.7rem;
@@ -198,7 +264,7 @@ sup {
 }
 
 ::placeholder {
-    color: #bfc1c8;
+    color:var(--primaryColor);
 }
 
 .temp_form input[type="submit"] {
@@ -210,13 +276,13 @@ sup {
     background:rgb(237, 40, 40);
     padding: 0 3rem;
     border-radius: 3rem;
-    color: white;
+    color:var(--primaryColor);
     font-size: 1.6rem;
 }
 
 .temp_form input[type="submit"]:hover {
-    color: rgb(237, 40, 40);
-    background-color: #fff;
+    color: var(--primaryColor);
+    background-color: var(--bgColor);
 }
 .errimg img{
     width: 60rem;
@@ -233,7 +299,7 @@ sup {
     width: 100%;
     /* Height of the footer*/
     line-height: 10px;
-    background: black;
+    background: var(--bgColor);
     
 }
 
@@ -241,7 +307,7 @@ sup {
     line-height: 5rem;
     text-align: center;
     font-size: 1.8rem;
-    color: #fff;
+    color: var(--primaryColor);
 }
 /* responsive code */
 
@@ -254,6 +320,60 @@ sup {
     .mainheader_right {
         height: auto;
         margin-top: 3rem;
+    }
+}
+/* Tablet styles (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .mainheader_left {
+        height: 50rem;
+    }
+
+    .mainheader_right {
+        height: 40rem;
+    }
+
+    .tempInformation {
+        width: 40rem;
+    }
+}
+
+/* Mobile styles (max-width: 768px) */
+@media (max-width: 768px) {
+    .mainheader_left {
+        height: auto;
+        margin: 5rem 0;
+    }
+
+    .mainheader_right {
+        height: auto;
+        margin-top: 3rem;
+    }
+
+    .tempInformation {
+        width: 30rem;
+    }
+
+    #weatherfooter {
+        padding: 5px 5px 0px 5px;
+    }
+}
+
+/* Small mobile styles (max-width: 480px) */
+@media (max-width: 400px) {
+    .mainheader_left {
+        font-size: 3rem;
+    }
+
+    .mainheader_right {
+        font-size: 2rem;
+    }
+
+    .tempInformation {
+        width: 30rem;
+    }
+
+    #weatherfooter {
+        padding: 2px 2px 0px 2px;
     }
 }
 

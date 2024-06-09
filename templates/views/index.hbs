@@ -17,11 +17,12 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <title>WindInformer</title>
 </head>
-<body>
+<body onload="onload()">
     
-   {{>navbar}}
+    {{>navbar}}
     <!-- mainheader -->
     <div class="container-fluid main_menu">
+     
         <div class="row">
             <div class="col-md-10 col-12 mx-auto">
                 <div class="row">
@@ -59,5 +60,7 @@
     </div>   
 
    {{>footer}}
+
+  <script src="js/main.js"></script>
 </body>
 </html>

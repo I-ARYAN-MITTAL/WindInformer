@@ -17,7 +17,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <title>weather web</title>
 </head>
-<body>
+<body onload="onload()">
     
    {{>navbar}}
     <!-- mainheader -->
@@ -79,9 +79,21 @@
         let curmonth = document.getElementById("today_data");
         todayDate=new Date().getDate()+' '+months+' '+new Date().getFullYear();
         day.innerText = days;
-        curmonth.innerHTML=todayDate ;
+        curmonth.innerHTML=todayDate;
         };
         getCurrentDay();
+         
     </script>
+    {{!-- <script>
+         const toggle_btn = document.querySelector('#checkbox')
+
+    toggle_btn.addEventListener('change' , () =>{
+      if(toggle_btn.checked){
+        document.body.classList.add('dark-mode')
+      }else{
+        document.body.classList.remove('dark-mode')
+      }
+    })
+    </script> --}}
 </body>
 </html>
